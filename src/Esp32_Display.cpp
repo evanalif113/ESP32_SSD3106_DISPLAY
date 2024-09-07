@@ -82,17 +82,16 @@ void displayData(String suhu, String kelembaban, String tekanan, String embun) {
   display.write(167);  // Degree symbol
   display.println("C");
 
-  
   display.print(F("H: "));
   display.println(kelembaban + " %");
 
-  display.print(F("P: "));
+  /*display.print(F("P: "));
   display.println(tekanan + "hPa");
 
   display.print(F("D: "));
   display.print(embun);
   display.write(167);  // Degree symbol
-  display.println("C");
+  display.println("C");*/
 
   display.display();  // Refresh the OLED screen
 }
@@ -102,7 +101,7 @@ void loop() {
   String response = fetchData();
   
   // Parse JSON using ArduinoJson library
-  StaticJsonDocument<2048> doc;
+  JsonDocument doc;
   DeserializationError error = deserializeJson(doc, response);
   
   if (error) {

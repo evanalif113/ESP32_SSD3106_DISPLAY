@@ -75,20 +75,21 @@ String fetchData() {
 void displayData(String suhu, String kelembaban, String tekanan, String embun) {
   display.clearDisplay();
   display.setCursor(0, 0);
+  display.setTextSize(2);
   
-  display.print(F("Suhu: "));
+  display.print(F("T: "));
   display.print(suhu);
   display.write(167);  // Degree symbol
   display.println("C");
 
   
-  display.print(F("Kelembaban: "));
+  display.print(F("H: "));
   display.println(kelembaban + " %");
 
-  display.print(F("Tekanan: "));
+  display.print(F("P: "));
   display.println(tekanan + "hPa");
 
-  display.print(F("Embun: "));
+  display.print(F("D: "));
   display.print(embun);
   display.write(167);  // Degree symbol
   display.println("C");

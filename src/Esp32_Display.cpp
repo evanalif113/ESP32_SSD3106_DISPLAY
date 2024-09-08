@@ -40,7 +40,7 @@ void setup() {
   // Initialize OLED display
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println(F("SSD1306 OLED initialization failed!"));
-    while (true);  // Don't proceed, loop forever
+    while (1);  // Don't proceed, loop forever
   }
   display.clearDisplay();
   display.setTextSize(1);
